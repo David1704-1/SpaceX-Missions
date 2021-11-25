@@ -4,4 +4,4 @@ Dependencies and their versions required for running this project:\
     3. GraphQL 16.0.1\
     4. React 17.0.2\
     5. React DOM 17.0.2\
-    6. Bootstrap 5.1.3\
+    6. Bootstrap 5.1.3
