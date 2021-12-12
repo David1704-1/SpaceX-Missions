@@ -2,7 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import client from '../apollo-client'
 import gql from 'graphql-tag'
-import Missions from '../Missions'
+import Missions from '../Components/Missions'
 
 export default function Home({ missions }) {
     return (

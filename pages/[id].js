@@ -1,16 +1,10 @@
 import client from '../apollo-client'
 import gql from 'graphql-tag'
-import styles from '../styles/Home.module.css'
+import Rocket from '../Components/Rocket'
 
-const Rocket = ({rocket}) => {   
+const RocketInfo = ({rocket}) => {   
     return (
-        <div className={styles.grid}>
-            <div className={styles.card}>
-                <h2>{rocket.name}</h2>
-                <p>Type: {rocket.type}</p>
-                <p>Description: {rocket.description}</p>
-            </div>      
-        </div>
+        <Rocket rocket={rocket}/>
     )
 }
 export async function getStaticProps(context){
@@ -53,4 +47,4 @@ export async function getStaticPaths(){
         fallback: false
     }
 }
-export default Rocket
+export default RocketInfo
