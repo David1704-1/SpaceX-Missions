@@ -1,8 +1,8 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import client from '../apollo-client'
 import gql from 'graphql-tag'
+import Missions from '../Missions'
 
 export default function Home({ missions }) {
     return (
@@ -18,20 +18,7 @@ export default function Home({ missions }) {
           </h1>
 
           <div className={styles.grid}>     
-            {
-              missions.map((mission)=>{
-                return (
-                  <a href={mission.rocket.rocket.id} className={styles.card} key={mission.id}>
-                      <h2>{mission.mission_name}</h2>
-                      {mission.links.flickr_images.length > 0 && (
-                      <Image src={mission.links.flickr_images[0]} width={300} height={300}/>
-                      )}
-                      <p>Launch date: {mission.launch_date_local}</p>
-                      <p>Launch site: {mission.launch_site.site_name}</p>
-                  </a>
-                )
-              })
-            }
+            <Missions missions={missions}/>
           </div>
         </main>
       </div>
